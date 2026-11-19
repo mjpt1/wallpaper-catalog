@@ -1,3 +1,31 @@
+<!-- gen:header -->
+<p align="center"><img src=".github/cover.svg" alt="DivarGallery" width="100%"></p>
+
+<h1 align="center">DivarGallery</h1>
+<p align="center"><b>کاتالوگ دیجیتال کاغذ دیواری</b><br><i>Digital wallpaper catalog website</i></p>
+<p align="center"><img alt="HTML" src="https://img.shields.io/badge/-HTML-a16207?style=for-the-badge"> <img alt="CSS" src="https://img.shields.io/badge/-CSS-a16207?style=for-the-badge"> <img alt="JavaScript" src="https://img.shields.io/badge/-JavaScript-a16207?style=for-the-badge"></p>
+
+<div dir="rtl">
+
+## ✨ امکانات
+
+- آلبوم‌ها و صفحه‌ی محصول
+- بدون نیاز به سرور
+- طراحی شیک و واکنش‌گرا
+
+</div>
+
+## 🚀 Quick start
+
+```bash
+python -m http.server 8080
+```
+
+---
+
+<!-- gen:docs -->
+## 📚 مستندات کامل · Full documentation
+
 # دیوارگالری — کاتالوگ کاغذ دیواری
 
 کاتالوگ دیجیتال شرکت کاغذ دیواری **دیوارگالری** — بدون فروش آنلاین، صرفاً برای مشاهده و انتخاب طرح.
@@ -77,3 +105,8 @@ wallpaper-catalog/
 ## محصولات نمونه
 
 ۲۰ محصول با کدهای ۵۱۱ تا ۵۳۰ در `data/products.js` تعریف شده‌اند.
+
+---
+
+<p align="center">ساخته‌شده توسط <a href="https://mahsen81.ir"><b>محسن جباره‌اصل</b></a> — برنامه‌نویسی، طراحی سایت، ربات و هوش مصنوعی<br>
+Built by <a href="https://mahsen81.ir">Mohsen Jabbareh-Asl</a> · ⭐ اگر مفید بود، ستاره بدهید · Need a custom version? <a href="https://mahsen81.ir">Get in touch</a></p>
