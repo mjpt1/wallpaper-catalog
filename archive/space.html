@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-category="space" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فضا — دیوارگالری</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header scrolled">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" alt="دیوارگالری" width="36" height="36">
+        <span>دیوارگالری</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="../index.html">خانه</a>
+        <a href="albums.html">آلبوم‌ها</a>
+        <a href="space.html">فضا</a>
+        <a href="location.html">موقعیت</a>
+        <a href="color.html">رنگ</a>
+        <a href="pattern.html">طرح</a>
+        <a href="../about.html">درباره</a>
+        <a href="../contact.html">تماس</a>
+      </nav>
+      <button class="menu-toggle" aria-label="منو"><span></span></button>
+    </div>
+    <nav class="nav-mobile">
+      <a href="../index.html">خانه</a>
+      <a href="albums.html">آلبوم‌ها</a>
+      <a href="space.html">فضا</a>
+      <a href="location.html">موقعیت</a>
+      <a href="color.html">رنگ</a>
+      <a href="pattern.html">طرح</a>
+      <a href="../about.html">درباره</a>
+      <a href="../contact.html">تماس</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="archive-hero">
+      <div class="container">
+        <p class="eyebrow">دسته‌بندی</p>
+        <h1>فضا</h1>
+        <p class="lead">کاغذ دیواری متناسب با کاربری فضا — اداری، رسمی و مسکونی.</p>
+      </div>
+    </section>
+
+    <div class="filter-bar">
+      <div class="container filter-pills">
+        <button class="filter-pill active" data-filter="">همه</button>
+        <button class="filter-pill" data-filter="office">اداری</button>
+        <button class="filter-pill" data-filter="formal">رسمی</button>
+        <button class="filter-pill" data-filter="residential">مسکونی</button>
+      </div>
+    </div>
+
+    <section class="section" style="padding-block-start: var(--space-md);">
+      <div class="container">
+        <p class="results-meta" id="results-meta"></p>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><div class="footer-bottom">© ۱۴۰۵ دیوارگالری</div></div>
+  </footer>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/archive.js"></script>
+</body>
+</html>

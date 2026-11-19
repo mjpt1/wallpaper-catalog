@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جزئیات محصول — دیوارگالری</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header scrolled">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="دیوارگالری" width="36" height="36">
+        <span>دیوارگالری</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html">خانه</a>
+        <a href="archive/albums.html">آلبوم‌ها</a>
+        <a href="archive/space.html">فضا</a>
+        <a href="archive/location.html">موقعیت</a>
+        <a href="archive/color.html">رنگ</a>
+        <a href="archive/pattern.html">طرح</a>
+        <a href="about.html">درباره</a>
+        <a href="contact.html">تماس</a>
+      </nav>
+      <button class="menu-toggle" aria-label="منو"><span></span></button>
+    </div>
+    <nav class="nav-mobile">
+      <a href="index.html">خانه</a>
+      <a href="archive/albums.html">آلبوم‌ها</a>
+      <a href="archive/space.html">فضا</a>
+      <a href="archive/location.html">موقعیت</a>
+      <a href="archive/color.html">رنگ</a>
+      <a href="archive/pattern.html">طرح</a>
+      <a href="about.html">درباره</a>
+      <a href="contact.html">تماس</a>
+    </nav>
+  </header>
+
+  <main class="product-detail">
+    <div class="container" id="product-content">
+      <p>در حال بارگذاری…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><div class="footer-bottom">© ۱۴۰۵ دیوارگالری</div></div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const code = new URLSearchParams(window.location.search).get('code');
+      const product = findProduct(code);
+      const el = document.getElementById('product-content');
+
+      if (!product) {
+        el.innerHTML = '<h1>محصول یافت نشد</h1><p><a href="index.html">بازگشت به خانه</a></p>';
+        return;
+      }
+
+      const labels = productTagLabels(product);
+      const img = productImageUrl(product, '');
+      document.title = `${product.title} — دیوارگالری`;
+
+      el.innerHTML = `
+        <div class="product-detail-grid reveal">
+          <div class="product-detail-image">
+            <img src="${img}" alt="${product.title}" width="600" height="600">
+          </div>
+          <div class="product-detail-info">
+            <span class="product-code-large">کد محصول: ${product.code}</span>
+            <h1>${product.title}</h1>
+            <p class="lead">${product.description}</p>
+            <dl class="product-specs">
+              <div class="spec-row">
+                <dt>آلبوم</dt>
+                <dd><a href="archive/albums.html?sub=${product.tags.albums}">${labels.albums}</a></dd>
+              </div>
+              <div class="spec-row">
+                <dt>فضا</dt>
+                <dd><a href="archive/space.html?sub=${product.tags.space}">${labels.space}</a></dd>
+              </div>
+              <div class="spec-row">
+                <dt>موقعیت</dt>
+                <dd><a href="archive/location.html?sub=${product.tags.location}">${labels.location}</a></dd>
+              </div>
+              <div class="spec-row">
+                <dt>رنگ</dt>
+                <dd><a href="archive/color.html?sub=${product.tags.color}">${labels.color}</a></dd>
+              </div>
+              <div class="spec-row">
+                <dt>طرح</dt>
+                <dd><a href="archive/pattern.html?sub=${product.tags.pattern}">${labels.pattern}</a></dd>
+              </div>
+            </dl>
+            <a href="contact.html" class="btn btn-primary">درخواست مشاوره</a>
+          </div>
+        </div>
+      `;
+      WallArtApp.initReveal();
+    });
+  </script>
+</body>
+</html>
